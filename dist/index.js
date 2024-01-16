@@ -1,18 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 // Import stylesheets
-require("./style.css");
+import "./style.css";
 // Write TypeScript code!
 const appDiv = document.getElementById("app");
 appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
 /* Any format ex: helloWorld or hello_world  */
 function ToTitleCase(input) {
-    const capitalsWithSpaces = input.replace(/([A-Z])/g, " $1").trim();
-    const underscoresToSpaces = capitalsWithSpaces.replace(/_/g, " ");
-    return underscoresToSpaces
-        .split(" ")
-        .map(p => p.charAt(0).toUpperCase() + p.substring(1).toLowerCase())
-        .join(" ");
+	const capitalsWithSpaces = input.replace(/([A-Z])/g, " $1").trim();
+	const underscoresToSpaces = capitalsWithSpaces.replace(/_/g, " ");
+	return underscoresToSpaces
+		.split(" ")
+		.map(p => p.charAt(0).toUpperCase() + p.substring(1).toLowerCase())
+		.join(" ");
 }
 // Example usage and display output
 // Example 1
@@ -40,13 +40,16 @@ appDiv.innerHTML += `<p><b>Input: </b>${example3} </br> <b>Output:</b> ${output3
 appDiv.innerHTML += `<p><b>Input: </b>${example4} </br> <b>Output:</b> ${output4}</p> </br>`;
 appDiv.innerHTML += `<p><b>Input: </b>${example5} </br> <b>Output:</b> ${output5}</p> </br>`;
 function convertSnakeCase(str) {
-    return str
-        .replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())
-        .replace(/[-_]+(.)/g, (_, c) => " " + c.toUpperCase());
+	return str
+		.replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())
+		.replace(/[-_]+(.)/g, (_, c) => " " + c.toUpperCase());
 }
 function convertKebabCase(string) {
-    var _a;
-    return (_a = string
-        .match(/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g)) === null || _a === void 0 ? void 0 : _a.join("-").toLowerCase();
+	var _a;
+	return (_a = string.match(
+		/[A-Z]{2,}(?=[A-Z][a-z]+[0-9]*|\b)|[A-Z]?[a-z]+[0-9]*|[A-Z]|[0-9]+/g
+	)) === null || _a === void 0
+		? void 0
+		: _a.join("-").toLowerCase();
 }
 //# sourceMappingURL=index.js.map
