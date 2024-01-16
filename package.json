@@ -4,13 +4,21 @@
 	"private": true,
 	"description": "modify strings to desired format",
 	"main": "index.js",
+	"type": "module",
 	"scripts": {
 		"start": "tsc --watch "
 	},
-	"repository": "https://github.com/SRYVPRASAD/formatting_typescript.git",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/SRYVPRASAD/formatting_typescript.git"
+	},
 	"author": "SRYVPRASAD",
 	"license": "MIT",
 	"devDependencies": {
 		"typescript": "^5.3.3"
-	}
+	},
+	"bugs": {
+		"url": "https://github.com/SRYVPRASAD/formatting_typescript/issues"
+	},
+	"homepage": "https://github.com/SRYVPRASAD/formatting_typescript#readme"
 }

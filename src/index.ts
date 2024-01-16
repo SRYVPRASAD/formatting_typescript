@@ -2,11 +2,14 @@
 import "./style.css";
 
 // Write TypeScript code!
-const appDiv: HTMLElement = document.getElementById("app");
-appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+const appDiv: HTMLElement | null = document.getElementById("app");
+if (appDiv !== null) {
+	appDiv.innerHTML = `<h1>TypeScript Starter</h1>`;
+}
 
 /* Any format ex: helloWorld or hello_world  */
 function ToTitleCase(input: string): string {
+	console.log("strhu");
 	const capitalsWithSpaces = input.replace(/([A-Z])/g, " $1").trim();
 	const underscoresToSpaces = capitalsWithSpaces.replace(/_/g, " ");
 	return underscoresToSpaces
@@ -37,16 +40,16 @@ const output4 = ToTitleCase(example3.toLowerCase());
 // Example 5
 const example5 = "camelCaseExample";
 const output5 = ToTitleCase(example5);
+if (appDiv !== null) {
+	// Display the output in the HTML document
+	appDiv.innerHTML += `<h3>Formatting function "To Title Case" </p>`;
 
-// Display the output in the HTML document
-appDiv.innerHTML += `<h3>Formatting function "To Title Case" </p>`;
-
-appDiv.innerHTML += `<p><b>Input: </b>${example1} </br> <b>Output:</b> ${output1}</p> </br>`;
-appDiv.innerHTML += `<p><b>Input: </b>${example2} </br> <b>Output:</b> ${output2}</p> </br>`;
-appDiv.innerHTML += `<p><b>Input: </b>${example3} </br> <b>Output:</b> ${output3}</p> </br>`;
-appDiv.innerHTML += `<p><b>Input: </b>${example4} </br> <b>Output:</b> ${output4}</p> </br>`;
-appDiv.innerHTML += `<p><b>Input: </b>${example5} </br> <b>Output:</b> ${output5}</p> </br>`;
-
+	appDiv.innerHTML += `<p><b>Input: </b>${example1} </br> <b>Output:</b> ${output1}</p> </br>`;
+	appDiv.innerHTML += `<p><b>Input: </b>${example2} </br> <b>Output:</b> ${output2}</p> </br>`;
+	appDiv.innerHTML += `<p><b>Input: </b>${example3} </br> <b>Output:</b> ${output3}</p> </br>`;
+	appDiv.innerHTML += `<p><b>Input: </b>${example4} </br> <b>Output:</b> ${output4}</p> </br>`;
+	appDiv.innerHTML += `<p><b>Input: </b>${example5} </br> <b>Output:</b> ${output5}</p> </br>`;
+}
 function convertSnakeCase(str: string) {
 	return str
 		.replace(/^[-_]*(.)/, (_, c) => c.toUpperCase())
