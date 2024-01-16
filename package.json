@@ -1,6 +1,16 @@
 {
-  "name": "typescript",
-  "version": "0.0.0",
-  "private": true,
-  "dependencies": {}
+	"name": "format",
+	"version": "0.0.1",
+	"private": true,
+	"description": "modify strings to desired format",
+	"main": "index.js",
+	"scripts": {
+		"start": "tsc --watch "
+	},
+	"repository": "https://github.com/SRYVPRASAD/formatting_typescript.git",
+	"author": "SRYVPRASAD",
+	"license": "MIT",
+	"devDependencies": {
+		"typescript": "^5.3.3"
+	}
 }
